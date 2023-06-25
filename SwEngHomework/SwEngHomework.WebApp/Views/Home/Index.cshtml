@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    var currentDateTime = DateTime.Now;
+}
+
+<div class="text-center" ">
+    <h3 class="display-4">Hello and Welcome!</h3>
+    <p>Welcome to the WebApp portion of the homework assignment.  For directions, please consult the README.md</p>
+    <hr />
+
+    <div>
+        <h4> <i>@currentDateTime.ToString("s", System.Globalization.CultureInfo.InvariantCulture)</i> </h4>
+    </div>
+
+@if (currentDateTime.Minute % 2 == 0) {
+        <i>
+            <a href="Other/EvenMinute" target="_blank">Even Minute</a>
+        </i>
+}
+
+    <hr />
+    <div>
+        Thank you for very much for taking the time to complete this part of the homework assignment!
+    </div>
+</div>
